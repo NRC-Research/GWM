@@ -1,0 +1,7 @@
+# Ignore these files
+*.html
+*.NOTUSED
+*.mod
+
+# Ignore these folders
+__pycache__/
