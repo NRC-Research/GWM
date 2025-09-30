@@ -5,7 +5,6 @@ GWM is a standalone software package based on the algorithm published in:
 (Nie, Graizer, and Seber, *Nuclear Engineering and Design*, **410**(112384), 15 August 2023; https://doi.org/10.1016/j.nucengdes.2023.112384)
 
 
-- [Dislaimer, Copyright Notice, and Contributions and Support](#dislaimer-copyright-notice-and-contributions-and-support)
 - [Dependencies](#dependencies)
 - [GWM Installation](#gwm-installation)
   - [Binary Files](#binary-files)
@@ -14,10 +13,6 @@ GWM is a standalone software package based on the algorithm published in:
 
 
 ![Screenshot](docs/images/Screenshot_with_border.png)
-
-## Dislaimer, Copyright Notice, and Contributions and Support
-[Please read here &#x1F517;](Disclaimer-Copyright-Notice-Contributions-Support.md)
-
 
 ## Dependencies
 
