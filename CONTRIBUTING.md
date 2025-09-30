@@ -1,0 +1,3 @@
+## Contributions and Support
+
+We welcome comments, error reports, feature requests, and code contributions from the user community. Your feedback is valuable in improving this tool. However, please note that we do not have resources for active code maintenance, and our response to inquiries or contributions may not be timely or provided at all. Users are expected to utilize the provided documentation and the source code itself for any debugging purposes.
