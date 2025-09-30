@@ -11,7 +11,4 @@ This software is provided by the authors "as is" and any express or implied warr
 
 This work, including the GWM source code, was authored by U.S. NRC employees as part of their official duties and is therefore in the public domain within the United States. While not subject to U.S. copyright law, we kindly request that any reference or use of this code credit the original publication as cited above.
 
-## Contributions and Support
-
-We welcome comments, error reports, feature requests, and code contributions from the user community. Your feedback is valuable in improving this tool. However, please note that we do not have resources for active code maintenance, and our response to inquiries or contributions may not be timely or provided at all. Users are expected to utilize the provided documentation and the source code itself for any debugging purposes.
 
