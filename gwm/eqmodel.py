@@ -6,7 +6,7 @@ Created on Jan 08, 2024
 @author: JS Nie @ US NRC
 """
 import numpy as np
-from ._equtils import rsmoothen_perc, rsmoothen, cavstd, splitcosinebell
+from ._equtils import rsmoothen_perc, rsmoothen, splitcosinebell
 from . import _baseline as bl
 
 
