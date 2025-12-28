@@ -1,0 +1,24 @@
+name: Traffic Logger
+
+on:
+  schedule:
+    # Run once a day at 23:00 UTC
+    - cron: "0 23 * * *"
+  workflow_dispatch: # Allows manual triggering
+
+jobs:
+  collect-traffic:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Run GitHub Repo Stats
+        uses: jgehrcke/github-repo-stats@v1
+        with:
+          # The token you created in step 1
+          ghtoken: ${{ secrets.TRAFFIC_TOKEN }}
+          
+          # Where to push the data? (Usually a separate branch keeps things clean)
+          # This action will create the branch if it doesn't exist.
+          publish_branch: gh-pages
