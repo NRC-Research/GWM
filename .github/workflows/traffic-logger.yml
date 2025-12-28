@@ -5,17 +5,25 @@ on:
     - cron: "0 23 * * *"
   workflow_dispatch:
 
+# Prevents multiple runs from overlapping and causing failures/emails
+concurrency:
+  group: traffic-logger
+  cancel-in-progress: true
+
 jobs:
   collect-traffic:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout
         uses: actions/checkout@v3
 
       - name: Run GitHub Repo Stats
-        uses: jgehrcke/github-repo-stats@v1
+        # Updated to use @main as requested
+        uses: jgehrcke/github-repo-stats@main
         with:
           ghtoken: ${{ secrets.TRAFFIC_TOKEN }}
           publish_branch: gh-pages
-          # This helps diagnose the exact failure point
+          # debug: true helps see logs, but you can set to false once working to reduce log size
           debug: true
