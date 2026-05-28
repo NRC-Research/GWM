@@ -1,5 +1,7 @@
 # Greedy Wavelet Method (GWM) 
 
+(CONTRIBUTING now includes user stories and feedback; submit a PR to add yours.)
+
 GWM is a standalone software package based on the algorithm published in: 
 "A greedy algorithm for wavelet-based time domain response spectrum matching" 
 (Nie, Graizer, and Seber, *Nuclear Engineering and Design*, **410**(112384), 15 August 2023; https://doi.org/10.1016/j.nucengdes.2023.112384)
