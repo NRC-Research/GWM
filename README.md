@@ -6,10 +6,12 @@ GWM is a standalone software package based on the algorithm published in:
 "A greedy algorithm for wavelet-based time domain response spectrum matching" 
 (Nie, Graizer, and Seber, *Nuclear Engineering and Design*, **410**(112384), 15 August 2023; https://doi.org/10.1016/j.nucengdes.2023.112384)
 
-## Two Primary Use Cases
+## Two Primary Use Cases 
 
 - Response spectrum (RS) matching while preserving the seed record’s original characteristics as much as possible (NED410-112384), or
 - Achieving both RS matching and power sufficiency through a two-step process—(a) replacing the Fourier Amplitude Spectrum of the seed using a target power spectral density function compatible with the design RS, and (b) applying GWM to complete RS matching (PVP2024-125200).
+
+Read the two references in docs for more details.
 
 ## Table of Contents
 - [Dependencies](#dependencies)
