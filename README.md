@@ -11,7 +11,7 @@ GWM is a standalone software package based on the algorithm published in:
 - Response spectrum (RS) matching while preserving the seed record’s original characteristics as much as possible (NED410-112384), or
 - Achieving both RS matching and power sufficiency through a two-step process—(a) replacing the Fourier Amplitude Spectrum of the seed using a target power spectral density function compatible with the design RS, and (b) applying GWM to complete RS matching (PVP2024-125200). This use case enables the Response spectrum/Power spectral density Parity (RPP) for seismic time history analysis and makes such analysis conceptually comparable to seismic response spectrum analysis and random vibration theory (RVT) based seismic analyses. 
 
-Read the two references in docs for more details.
+The two references are provided in the docs folder for convenience.
 
 ## Table of Contents
 - [Dependencies](#dependencies)
