@@ -56,15 +56,17 @@ The `mingw64_deps` folder contains several `.dll` files from the compiler. These
 
 ## Tests
 
-Two test scripts are provided in the `tests` folder to demonstrate how to create starting scripts for using GWM:
+Three test scripts are provided in the `tests` folder to demonstrate how to create starting scripts for using GWM:
 
 - Benchmark_RspMatch09_example.py
 - test_RG1.60.py
+- gwm_start_script_template.py (This is a much simplified script based on test_RG1.60.py.)
 
 To execute these scripts, use the following commands in a CMD window or PowerShell prompt:
 
 ```
 python Benchmark_RspMatch09_example.py
 python test_RG1.60.py
+python gwm_start_script_template.py
 ``` 
 
