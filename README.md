@@ -2,7 +2,7 @@
 
 (**CONTRIBUTING.md now includes user stories and feedback; open a Pull Request to add your story.**)
 
-GWM is a standalone software package based on the algorithm published in: Nie, J., Graizer, V., & Seber, D. (2023). *A greedy algorithm for wavelet‑based time domain response spectrum matching*. Nuclear Engineering and Design, 416, 112384. [https://doi.org/10.1016/j.nucengdes.2023.112384](https://doi.org/10.1016/j.nucengdes.2023.112384) ([ML23139A173](https://www.nrc.gov/docs/ML2313/ML23139A173.pdf))
+GWM is a standalone software package based on the algorithm published in: Nie, J., Graizer, V., & Seber, D. (2023). *A greedy algorithm for wavelet‑based time domain response spectrum matching*. Nuclear Engineering and Design, **410**(112384). [https://doi.org/10.1016/j.nucengdes.2023.112384](https://doi.org/10.1016/j.nucengdes.2023.112384) ([ML23139A173](https://www.nrc.gov/docs/ML2313/ML23139A173.pdf))
 
 "A greedy algorithm for wavelet-based time domain response spectrum matching" 
 (Nie, Graizer, and Seber, *Nuclear Engineering and Design*, **410**(112384), 15 August 2023; https://doi.org/10.1016/j.nucengdes.2023.112384)
