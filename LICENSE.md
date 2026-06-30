@@ -2,7 +2,7 @@
 
 The authors are publicly releasing the source code for the Greedy Wavelet Method (GWM) for response spectrum (RS) matching. This code implements the greedy algorithm described in the publication:
 
-> Nie, J., Graizer, V., & Seber, D. (2023). A greedy algorithm for wavelet-based time domain response spectrum matching, *Nuclear Engineering and Design*, **410**(112384). https://doi.org/10.1016/j.nucengdes.2023.112384
+> Nie, J., Graizer, V., & Seber, D. (2023). *A greedy algorithm for wavelet‑based time domain response spectrum matching*. Nuclear Engineering and Design, **410**(112384). [https://doi.org/10.1016/j.nucengdes.2023.112384](https://doi.org/10.1016/j.nucengdes.2023.112384) ([ML23139A173](https://www.nrc.gov/docs/ML2313/ML23139A173.pdf))
 
 ## Disclaimer
 
