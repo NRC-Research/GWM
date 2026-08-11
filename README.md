@@ -1,10 +1,19 @@
 # Greedy Wavelet Method (GWM) 
 
-GWM is a standalone software package based on the algorithm published in: 
-"A greedy algorithm for wavelet-based time domain response spectrum matching" 
-(Nie, Graizer, and Seber, *Nuclear Engineering and Design*, **410**(112384), 15 August 2023; https://doi.org/10.1016/j.nucengdes.2023.112384)
+(**CONTRIBUTING.md now includes user stories and feedback; open a Pull Request to add your story.**)
 
+GWM is a standalone software package based on the algorithm published by: 
 
+> Nie, J., Graizer, V., & Seber, D. (2023). *A greedy algorithm for wavelet‑based time domain response spectrum matching*. Nuclear Engineering and Design, **410**(112384). [https://doi.org/10.1016/j.nucengdes.2023.112384](https://doi.org/10.1016/j.nucengdes.2023.112384) ([ML23139A173](https://www.nrc.gov/docs/ML2313/ML23139A173.pdf))
+
+## Two Primary Use Cases 
+
+- Response spectrum (RS) matching while preserving the seed record’s original characteristics as much as possible (NED410-112384). This feature is especially attractive if a seed is selected for characteristics that the analyst intends to preserve. 
+- Achieving both RS matching and power sufficiency through a two-step process—(a) replacing the Fourier Amplitude Spectrum of the seed using a target power spectral density function compatible with the design RS, and (b) applying GWM to complete RS matching (PVP2024-125200). This use case enables the Response spectrum/Power spectral density Parity (RPP) for seismic time history analysis and makes such analysis conceptually comparable to seismic response spectrum analysis and random vibration theory (RVT) based seismic analyses. 
+
+The two references are provided in the docs folder for convenience.
+
+## Table of Contents
 - [Dependencies](#dependencies)
 - [GWM Installation](#gwm-installation)
   - [Binary Files](#binary-files)
@@ -47,15 +56,17 @@ The `mingw64_deps` folder contains several `.dll` files from the compiler. These
 
 ## Tests
 
-Two test scripts are provided in the `tests` folder to demonstrate how to create starting scripts for using GWM:
+Three test scripts are provided in the `tests` folder to demonstrate how to create starting scripts for using GWM:
 
 - Benchmark_RspMatch09_example.py
 - test_RG1.60.py
+- gwm_start_script_template.py (This is a much simplified script based on test_RG1.60.py.)
 
 To execute these scripts, use the following commands in a CMD window or PowerShell prompt:
 
 ```
 python Benchmark_RspMatch09_example.py
 python test_RG1.60.py
+python gwm_start_script_template.py
 ``` 
 
