@@ -13,7 +13,14 @@ GWM is a standalone software package based on the algorithm published by:
 
 The two references are provided in the docs folder for convenience.
 
+## Minor Update to Make Auto-match Work Again
+
+A quick fix in greedy_wavelet_method.py restores auto-match functionality without the GUI. A test script for auto-match is included. Non-GUI auto-matching supports sequential or parallel processing of many seed motions for workflows such as probabilistic seismic hazard analysis. The original motivation for developing GWM was to address the research need to match thousands of seed records (NED410-112384).
+
 ## Table of Contents
+- [Two Primary Use Cases](#two-primary-use-cases)
+- [Minor Update to Make Auto-match Work Again](#minor-update-to-make-auto-match-work-again)
+- [Table of Contents](#table-of-contents)
 - [Dependencies](#dependencies)
 - [GWM Installation](#gwm-installation)
   - [Binary Files](#binary-files)
@@ -56,11 +63,12 @@ The `mingw64_deps` folder contains several `.dll` files from the compiler. These
 
 ## Tests
 
-Three test scripts are provided in the `tests` folder to demonstrate how to create starting scripts for using GWM:
+Four test scripts are provided in the `tests` folder to demonstrate how to create starting scripts for using GWM:
 
 - Benchmark_RspMatch09_example.py
 - test_RG1.60.py
 - gwm_start_script_template.py (This is a much simplified script based on test_RG1.60.py.)
+- gwm_start_script_template_auto_nogui.py (automatically match many seeds/target DRS without GUI)
 
 To execute these scripts, use the following commands in a CMD window or PowerShell prompt:
 
@@ -68,5 +76,6 @@ To execute these scripts, use the following commands in a CMD window or PowerShe
 python Benchmark_RspMatch09_example.py
 python test_RG1.60.py
 python gwm_start_script_template.py
+python gwm_start_script_template_auto_nogui.py  
 ``` 
 
