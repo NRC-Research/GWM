@@ -333,7 +333,8 @@ class WaveletMatch:
         self.show()
     
     def show(self):
-        plt.show()
+        if not self.auto:
+            plt.show()
         return self
     
     def flashSplash(self, time=2000):
@@ -361,7 +362,8 @@ class WaveletMatch:
     def setup_GUI(self):
         self.fig = plt.figure(figsize=(9, 9))
         self.window = self.fig.canvas.manager.window
-        self.flashSplash()
+        if not self.auto:
+            self.flashSplash()
         # self.window.move(0, 0)
         from PyQt5 import QtWidgets
         sizeObject = QtWidgets.QDesktopWidget().screenGeometry(-1)
@@ -1212,7 +1214,8 @@ class WaveletMatch:
         on_click.old_ax_rate_ylims = None
         fig.cid = fig.canvas.mpl_connect('button_press_event', on_click)
         fig.canvas.draw_idle()
-        plt.show(block=False)
+        if not self.auto:
+            plt.show(block=False)
         
     def set_freq_range(self):
         if self.freq_range.start is None:
@@ -1446,6 +1449,13 @@ class WaveletMatch:
         self.psigns = psign[0]
 
     def get_iter(self, maxiter):
+        if self.auto:
+            try:
+                from tqdm import tqdm
+                return tqdm(range(maxiter))
+            except:
+                return char_iter(range(maxiter))
+            
         if self.use_mpl_iter and not self.fig.canvas.widgetlock.locked():
             return mpl_iter(self.fig, range(maxiter), stoppable=True)
         else:
@@ -2741,7 +2751,8 @@ class WaveletMatch:
         self.avd_plot.suptitle('Acceleration, Velocity, and Displacement Histories')
         self.avd_plot.tight_layout()
         self.avd_plot.canvas.draw_idle()
-        plt.show(block=False)
+        if not self.auto:
+            plt.show(block=False)
         # self.avd_plot.canvas.manager.window.show()
     
     def plot_Fourier_spectra(self):
@@ -2815,7 +2826,8 @@ class WaveletMatch:
             self.fourier_spectra_plot.align_ylabels([axfas, axfps])
             self.fourier_spectra_plot.tight_layout()
             self.fourier_spectra_plot.canvas.draw_idle()
-            plt.show(block=False)
+            if not self.auto:
+                plt.show(block=False)
             # for nam in ('acc', 'vel', 'dis'):
             #     ax = getattr(self, f'avdp_{nam}')
             #     ax.relim()
@@ -2923,8 +2935,9 @@ class WaveletMatch:
         # self.fig.savefig(pngfile)
         savefig_reduced_png(self.fig, pngfile)
         print('Saved:', pngfile)
-        savefig_reduced_png(self.avd_plot, avdpngfile)
-        print('Saved:', avdpngfile)
+        if self.avd_plot:
+            savefig_reduced_png(self.avd_plot, avdpngfile)
+            print('Saved:', avdpngfile)
         if self.fourier_spectra_plot:
             fspngfile = basefile + '_fas_fps.png'
             savefig_reduced_png(self.fourier_spectra_plot, fspngfile)
