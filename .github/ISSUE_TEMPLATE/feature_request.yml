@@ -1,0 +1,62 @@
+```yaml
+name: Feature Request
+description: Suggest an improvement or new capability for GWM
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for suggesting an improvement to GWM.
+
+        Please describe the problem or use case first, then explain the change you would like to see. This helps us understand the motivation behind the request.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or use case
+      description: What problem are you trying to solve, or what capability is currently missing?
+      placeholder: Describe the modeling, workflow, usability, or other need.
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed feature or improvement
+      description: Describe what you would like GWM to support or do differently.
+      placeholder: Describe your proposed feature or improvement.
+    validations:
+      required: true
+
+  - type: textarea
+    id: example
+    attributes:
+      label: Example
+      description: |
+        If possible, provide an example showing how the proposed feature would be used.
+      placeholder: Describe an example workflow, input, output, or use case.
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Have you considered any alternative approaches or workarounds?
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional context
+      description: Add references, figures, publications, related software, or other information that may help explain the request.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched existing issues for the same or a similar feature request.
+          required: true
+        - label: I have removed confidential, sensitive, or personally identifiable information from the material provided.
+          required: true
+```

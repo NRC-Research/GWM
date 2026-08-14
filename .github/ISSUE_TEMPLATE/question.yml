@@ -1,0 +1,73 @@
+```yaml
+name: Question / Support
+description: Ask for help using or understanding GWM
+title: "[Question]: "
+labels:
+  - question
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Have a question about using GWM? Please provide enough context for others to understand what you are trying to accomplish.
+
+        For reproducible software errors or unexpected behavior, please use the Bug Report form instead.
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Question
+      description: What would you like help with?
+      placeholder: Describe your question as clearly as possible.
+    validations:
+      required: true
+
+  - type: textarea
+    id: goal
+    attributes:
+      label: What are you trying to accomplish?
+      description: Describe the objective or modeling task you are working on.
+      placeholder: Explain what you are trying to achieve with GWM.
+    validations:
+      required: true
+
+  - type: textarea
+    id: attempted
+    attributes:
+      label: What have you tried?
+      description: Describe the approach you have taken so far and what happened.
+      placeholder: Include relevant commands, settings, or workflow details.
+
+  - type: input
+    id: version
+    attributes:
+      label: GWM version
+      description: If relevant, provide the GWM release, version, or Git commit hash.
+      placeholder: "e.g., v1.0.0 or commit abc1234"
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options:
+        - Windows
+        - Linux
+        - macOS
+        - Other
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional context
+      description: |
+        Add relevant configuration, output, screenshots, figures, or references. Please remove confidential or sensitive information.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched existing issues for an answer to my question.
+          required: true
+        - label: I have removed confidential, sensitive, or personally identifiable information from the material provided.
+          required: true
+```
