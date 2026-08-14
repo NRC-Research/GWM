@@ -1,4 +1,3 @@
-```yaml
 name: Question / Support
 description: Ask for help using or understanding GWM
 title: "[Question]: "
@@ -70,4 +69,4 @@ body:
           required: true
         - label: I have removed confidential, sensitive, or personally identifiable information from the material provided.
           required: true
-```
+

@@ -1,4 +1,3 @@
-```yaml
 name: Bug Report
 description: Report a reproducible problem or unexpected behavior in GWM
 title: "[Bug]: "
@@ -101,4 +100,4 @@ body:
           required: true
         - label: I have removed confidential, sensitive, or personally identifiable information from the material provided.
           required: true
-```
+
