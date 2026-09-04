@@ -51,6 +51,7 @@ def match(i, seed_file):
     m = wm.WaveletMatch(
             dt, seed, freq, trs,
             accname=seed_file,
+            drsname="RG1.60_HOR",
             # zpa=0.3,
             tol=tol,
             scaling='SA', # scalling to PSA does not converge quickly

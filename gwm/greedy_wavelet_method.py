@@ -224,6 +224,7 @@ class WaveletMatch:
     def __init__(self, dt, seed, tfreq, trs, 
                  ptrise=0.075, ptdecay=0.375, # percent of T, default to NUREG/CR-4357 Envelope Function B
                 accname='Unnamed',
+                drsname='Unnamed',
                 zpa=None,
                 damping=0.05,
                 scaling='NoScaling',
@@ -249,6 +250,7 @@ class WaveletMatch:
         '''seed is a numpy array
         '''
         self.accname = accname
+        self.drsname = drsname
         self.target_psd = None
         # self.dt = dt
         # self.seed = seed
@@ -1550,7 +1552,7 @@ class WaveletMatch:
                                      f'<= {self.default_tol:.1%}')
                 print(self.match_status )
                 if self.auto:
-                    self.dump(f'Converged-{amax:.1%}-{self.accname}')
+                    self.dump(f'Converged-{amax:.1%}-{self.drsname}-{self.accname}')
                     
                 # try to close the qbar if exists
                 if hasattr(self, 'qpbar'): # qpbar is added by qpprogressbar if used

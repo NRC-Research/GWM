@@ -1,1 +1,0 @@
-$env:PYTHONPATH = "$env:OneDrive\\JRN1\\0_RES\\9 Computer Codes\\GWM_public_release\\GWM"
