@@ -2657,7 +2657,7 @@ class WaveletMatch:
     def filter(self):
         # fmin = self.tfreq[0]
         # try:
-        span_status = self.span.visible
+        span_status = self.span._visible
         self.span.set_visible(False)
         self.fig.canvas.draw_idle()
         self.cursor_filter = Cursor(self.axrs, horizOn=True, 
