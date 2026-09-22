@@ -3,7 +3,7 @@
 A greedy algorithm for wavelet-based time domain response spectrum matching 
 (Nie, Graizer, and Seber, NED 2023. https://doi.org/10.1016/j.nucengdes.2023.112384)
 
-Jan 08, 2024
+Sep 22, 2026
 
 Jan 25, 2024: Testing apply taper for each added wavelet. 
     Should this be iteratively for low frequency wavelets? It seems better just use taper once after RS convergence!!!
@@ -1791,7 +1791,7 @@ class WaveletMatch:
             wlpeak= max(self.added_wavelet)
         else:
             wlpeak = min(self.added_wavelet)
-        self.wl_handle_th.set_ydata(wlpeak)
+        self.wl_handle_th.set_ydata([wlpeak])
         self.plot_current()
         # self.axrs.relim()
         # self.axth.relim()
@@ -1821,7 +1821,7 @@ class WaveletMatch:
         self.wl_params = (tloc, thtime, thval, wlfactor)
         self.calc_rs()
         self.wavelet_curve.set_ydata(self.added_wavelet)
-        self.wl_handle_rs.set_ydata(self.rs[self.imax])
+        self.wl_handle_rs.set_ydata([self.rs[self.imax]])
         self.plot_current()
         self.fig.canvas.draw_idle()   
 
